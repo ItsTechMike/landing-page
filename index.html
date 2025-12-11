@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cyber Link Hub</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #050505;
+      color: #c8ffc8;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 540px;
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #00ff99;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 15px #00ff99aa;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin: 10px 0 5px;
+      color: #00ff99;
+      text-shadow: 0 0 8px #00ff99;
+    }
+
+    .description {
+      font-size: 0.95rem;
+      color: #b2ffda;
+      margin-bottom: 30px;
+    }
+
+    /* --- New Grid Link Box (Perfect Center Alignment) --- */
+    .link {
+      display: grid;
+      grid-template-columns: 45px 1fr 45px;
+      /* icon | centered text | empty spacer */
+      align-items: center;
+
+      background: rgba(0, 255, 120, 0.1);
+      border: 1px solid #00ff99;
+      padding: 15px 18px;
+      margin: 12px 0;
+      border-radius: 8px;
+      color: #caffea;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: 0.25s;
+      backdrop-filter: blur(4px);
+    }
+
+    .link:hover {
+      background: #00ff99;
+      color: #000;
+      box-shadow: 0 0 15px #00ff99;
+      transform: scale(1.03);
+    }
+
+    .icon-wrapper {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Default = Neon Green for SVG + PNG */
+    .icon-wrapper img,
+    .icon-wrapper svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+      /* SVG = neon green */
+      fill: #00ff99 !important;
+
+      /* PNG = neon green */
+      filter: brightness(0) saturate(100%) invert(63%) sepia(87%) saturate(520%) hue-rotate(100deg) brightness(110%);
+    }
+
+    /* Hover = turn icon black */
+    .link:hover .icon-wrapper img,
+    .link:hover .icon-wrapper svg {
+      fill: #000000 !important;
+      filter: brightness(0);
+      /* forces PNG to black */
+    }
+
+    .icon-wrapper.facebook svg path {
+      fill: #00ff99 !important;
+      /* default neon green */
+    }
+
+    /* Facebook hover → black */
+    .link:hover .icon-wrapper.facebook svg path {
+      fill: #000000 !important;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <img src="./assets/logo.png" class="avatar">
+
+    <h1>ItsTechMike</h1>
+    <p class="description">OSINT, AI, and Tech News!</p>
+
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/itstechmike/" class="link">
+      <div class="icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path
+            d="M65 16.667h70c26.667 0 48.333 21.666 48.333 48.333v70A48.334 48.334 0 0 1 135 183.333H65c-26.667 0-48.333-21.666-48.333-48.333V65A48.333 48.333 0 0 1 65 16.667m-1.667 16.666a30 30 0 0 0-30 30v73.334c0 16.583 13.417 30 30 30h73.334a30 30 0 0 0 30-30V63.333c0-16.583-13.417-30-30-30zm80.417 12.5a10.418 10.418 0 1 1 0 20.836 10.418 10.418 0 0 1 0-20.836M100 58.333a41.667 41.667 0 1 1 0 83.334 41.667 41.667 0 0 1 0-83.334M100 75a25 25 0 1 0 0 50 25 25 0 0 0 0-50">
+          </path>
+        </svg>
+      </div>
+
+      <div>Instagram</div>
+
+      <div></div> <!-- Right spacer -->
+    </a>
+
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@itstechmike" class="link">
+      <div class="icon-wrapper">
+        <img src="./assets/tiktok.png" alt="">
+      </div>
+
+      <div>TikTok</div>
+
+      <div></div>
+    </a>
+
+
+    <!-- YouTube -->
+    <a href="https://www.youtube.com/@ItsTechMike" class="link">
+      <div class="icon-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <path
+            d="m83.333 125 43.25-25-43.25-25zm96.334-65.25c1.083 3.917 1.833 9.167 2.333 15.833.583 6.667.833 12.417.833 17.417l.5 7c0 18.25-1.333 31.667-3.666 40.25-2.084 7.5-6.917 12.333-14.417 14.417-3.917 1.083-11.083 1.833-22.083 2.333-10.834.583-20.75.833-29.917.833l-13.25.5c-34.917 0-56.667-1.333-65.25-3.666-7.5-2.084-12.333-6.917-14.417-14.417-1.083-3.917-1.833-9.167-2.333-15.833-.583-6.667-.833-12.417-.833-17.417l-.5-7c0-18.25 1.333-31.667 3.666-40.25 2.084-7.5 6.917-12.333 14.417-14.417C38.667 44.25 45.833 43.5 56.833 43c10.834-.583 20.75-.833 29.917-.833l13.25-.5c34.917 0 56.667 1.333 65.25 3.666 7.5 2.084 12.333 6.917 14.417 14.417">
+          </path>
+        </svg>
+      </div>
+
+      <div>YouTube</div>
+
+      <div></div>
+    </a>
+
+
+    <!-- Facebook -->
+    <a href="#" class="link">
+      <div class="icon-wrapper facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M13 3h4V0h-4c-3.9 0-6 2.9-6 6.2V9H4v4h3v11h4V13h3l1-4h-4V6.2C11 4.9 11.7 3 13 3z" />
+        </svg>
+      </div>
+
+      <div>Facebook</div>
+
+      <div></div>
+    </a>
+
+
+    <div class="footer">© 2025 ItsTechMike</div>
+
+  </div>
+</body>
+
+</html>
